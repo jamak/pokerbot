@@ -3,6 +3,7 @@ from cards import suitList as suits
 from cards import rankList as ranks
 from operator import and_ as ans
 from operator import eq
+
 hand_types =   {"HC":ranks, "1P":ranks,
                 "2P":ranks, "3K":ranks[5:],
                 "SR":ranks[5:],"FL":ranks[5:],
@@ -62,5 +63,4 @@ class Hand(object):
         return self.is_a_straight() and self.is_a_flush() and self.is_royal()
 
 
-Deck = {
-        "Clubs":{Card(0,k) for k in xrange(13)} }
+
