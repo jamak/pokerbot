@@ -62,16 +62,5 @@ class Hand(object):
         return self.is_a_straight() and self.is_a_flush() and self.is_royal()
 
 
-class HandTest(object):
-    """Should register as a royal flush"""
-    def __init__(self, hand):
-        super(HandTest, self).__init__()
-        self.hand = hand
-
-    def tests(self):
-        """tests assertions"""
-        assert self.hand.royal_flush()
-        self.hand.by_suit()
-        assert self.hand.cards == [Card(0, 12), Card(0, 13), Card(0, 11), Card(0, 10), Card(0, 14)]
 Deck = {
         "Clubs":{Card(0,k) for k in xrange(13)} }
