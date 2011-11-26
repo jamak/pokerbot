@@ -73,3 +73,5 @@ class HandTest(object):
         assert self.hand.royal_flush()
         self.hand.by_suit()
         assert self.hand.cards == [Card(0, 12), Card(0, 13), Card(0, 11), Card(0, 10), Card(0, 14)]
+Deck = {
+        "Clubs":{Card(0,k) for k in xrange(13)} }
